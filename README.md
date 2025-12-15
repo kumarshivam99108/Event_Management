@@ -33,6 +33,9 @@ It is suitable for **college projects** and helps in understanding **full-stack 
 
 ---
 
+#run this code in index.html
+
+
 ## 📂 Project Structure  
 
 ```text
