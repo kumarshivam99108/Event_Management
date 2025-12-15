@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif; /* Use a fallback font if 'kuch' isn't defined */
+    background-image: url(/Assest/succes.jpeg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.success-container {
+    background-color: white;
+    padding: 4rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
+    text-align: center;
+    /* max-width: 700px; */
+    width: 600px;
+    height: 250px;
+}
+
+h1 {
+    color: crimson;
+    margin-bottom: 2rem;
+}
+
+p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: crimson;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.home-btn:hover {
+    background-color: #b01030;
+}

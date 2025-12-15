@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="Fronted'/register.css">
+    <script src="Fronted'/register.js"></script>
+</head>
+<body>
+    <section class="register-section">
+        <div class="container">
+            <div class="form-container">
+                <h1 class="title">Register for the Event</h1>
+                <p class="subtitle">Join us for an unforgettable experience! Fill out the form below to secure your spot.</p>
+                <form   class="register-form"  action="after.html" >
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="event">Select Event</label>
+                        <select id="event" name="event" required>
+                            <option value="" disabled selected>Choose an event</option>
+                            <option value="wedding">Wedding</option>
+                            <option value="corporate">Corporate Meetup</option>
+                            <option value="festival">festival</option>
+                            <option value="confrence">confrence</option>
+                            <option value="concert">concert</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Message (Optional)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Any special requests or questions?"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Register Now </button>
+                </form>
+            </div>
+        </div>
+        <form action="admin.html"></form>
+    </section>
+    
+
+</body>
+</html>

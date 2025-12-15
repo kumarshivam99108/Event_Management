@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Community - Share & Connect</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:cursive;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(180, 4, 0, 0.8), rgba(186, 4, 10, 0.1)), url('images/banner.jpg');
+            background-size: cover;
+            padding: 20px 8%;
+            position: relative;
+            color: white;
+           
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 38px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 26px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #34a853;
+        }
+
+        .community-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .community-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+
+        .community-header h1 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .community-header p {
+            font-size: 1.2em;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .community-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: #333;
+            margin: 60px 0 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #640400, #ecd000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .category-description {
+            text-align: center;
+            color: #666;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .community-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .community-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .card-content p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .member-count {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .member-count i {
+            color: #34a853;
+        }
+
+        .join-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #333, #34a853);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .join-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(52, 168, 83, 0.3);
+        }
+
+        .community-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 80px 0;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .feature-card i {
+            font-size: 40px;
+            color: #34a853;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .community-header {
+                padding: 40px 20px;
+            }
+
+            .community-header h1 {
+                font-size: 2em;
+            }
+
+            .community-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">DazzleAura</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking-details.html">Bookings</a></li>
+                <li><a href="community.html">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="community-container">
+        <div class="community-header">
+            <h1>Join Our Event Community</h1>
+            <p>Connect with fellow event organizers, share experiences, and discover amazing venues. Whether you're planning a wedding, corporate event, or festival, our community is here to help!</p>
+        </div>
+
+        <div class="community-features">
+            <div class="feature-card">
+                <i class="bi bi-people-fill"></i>
+                <h3>Network & Connect</h3>
+                <p>Connect with experienced event planners and vendors. Share ideas and build valuable relationships.</p>
+            </div>
+            <div class="feature-card">
+                <i class="bi bi-lightbulb-fill"></i>
+                <h3>Share Ideas</h3>
+                <p>Get inspired by creative event concepts and share your own unique ideas with the community.</p>
+            </div>
+            <div class="feature-card">
+                <i class="bi bi-star-fill"></i>
+                <h3>Expert Tips</h3>
+                <p>Access professional advice and insider tips from seasoned event planning experts.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">Conferences & Business Events</h2>
+        <p class="category-description">Discover professional networking opportunities and business events that can transform your career and organization.</p>
+        
+        <div class="community-grid">
+            <div class="community-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80');"></div>
+                <div class="card-content">
+                    <h3>Tech Conference 2025</h3>
+                    <p>Join the biggest tech conference featuring industry leaders, innovative startups, and cutting-edge technologies.</p>
+                    <div class="member-count">
+                        <i class="bi bi-people"></i>
+                        <span>5,000+ attendees</span>
+                    </div>
+                    <a href="#" class="join-button">Register Now</a>
+                </div>
+            </div>
+
+            <div class="community-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80');"></div>
+                <div class="card-content">
+                    <h3>Business Leadership Summit</h3>
+                    <p>A premier gathering of business leaders sharing insights on leadership, innovation, and future trends.</p>
+                    <div class="member-count">
+                        <i class="bi bi-people"></i>
+                        <span>2,000+ attendees</span>
+                    </div>
+                    <a href="#" class="join-button">Register Now</a>
+                </div>
+            </div>
+
+            <div class="community-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1591115765373-5207764f72e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80');"></div>
+                <div class="card-content">
+                    <h3>Global Marketing Conference</h3>
+                    <p>Explore the latest marketing strategies, digital trends, and networking opportunities with industry experts.</p>
+                    <div class="member-count">
+                        <i class="bi bi-people"></i>
+                        <span>3,000+ attendees</span>
+                    </div>
+                    <a href="#" class="join-button">Register Now</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Concerts & Entertainment</h2>
+        <p class="category-description">Experience the magic of live music and entertainment with our curated selection of concerts and performances.</p>
+        
+        <div class="community-grid">
+            <div class="community-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80');"></div>
+                <div class="card-content">
+                    <h3>Summer Music Festival</h3>
+                    <p>Three days of non-stop music featuring top artists, multiple stages, and unforgettable experiences.</p>
+                    <div class="member-count">
+                        <i class="bi bi-music-note-beamed"></i>
+                        <span>15,000+ attendees</span>
+                    </div>
+                    <a href="#" class="join-button">Get Tickets</a>
+                </div>
+            </div>
+
+            <div class="community-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1501612780327-45045538702b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80');"></div>
+                <div class="card-content">
+                    <h3>Rock Revolution Concert</h3>
+                    <p>Experience the ultimate rock concert featuring legendary bands and emerging rock stars.</p>
+                    <div class="member-count">
+                        <i class="bi bi-music-note-beamed"></i>
+                        <span>8,000+ attendees</span>
+                    </div>
+                    <a href="#" class="join-button">Get Tickets</a>
+                </div>
+            </div>
+
+            <div class="community-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1574375927938-d5a98e8ffe85?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80');"></div>
+                <div class="card-content">
+                    <h3>Electronic Music Night</h3>
+                    <p>A night of electronic music featuring world-class DJs, stunning visuals, and immersive experiences.</p>
+                    <div class="member-count">
+                        <i class="bi bi-music-note-beamed"></i>
+                        <span>5,000+ attendees</span>
+                    </div>
+                    <a href="#" class="join-button">Get Tickets</a>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Weddings & Celebrations</h2>
+        <p class="category-description">Find inspiration for your dream wedding and connect with professional wedding planners and vendors.</p>
+        
+        <div class="community-grid">
+            <div class="community-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80');"></div>
+                <div class="card-content">
+                    <h3>Wedding Planners Circle</h3>
+                    <p>Connect with professional wedding planners and couples. Share wedding trends, venues, and planning tips.</p>
+                    <div class="member-count">
+                        <i class="bi bi-people"></i>
+                        <span>2,500+ members</span>
+                    </div>
+                    <a href="#" class="join-button">Join Group</a>
+                </div>
+            </div>
+
+            <div class="community-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80');"></div>
+                <div class="card-content">
+                    <h3>Corporate Event Network</h3>
+                    <p>A professional network for corporate event planners. Discuss strategies, venues, and best practices.</p>
+                    <div class="member-count">
+                        <i class="bi bi-people"></i>
+                        <span>1,800+ members</span>
+                    </div>
+                    <a href="#" class="join-button">Join Group</a>
+                </div>
+            </div>
+
+            <div class="community-card">
+                <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80');"></div>
+                <div class="card-content">
+                    <h3>Festival Organizers Hub</h3>
+                    <p>Connect with festival and concert organizers. Share experiences about managing large-scale events.</p>
+                    <div class="member-count">
+                        <i class="bi bi-people"></i>
+                        <span>1,200+ members</span>
+                    </div>
+                    <a href="#" class="join-button">Join Group</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

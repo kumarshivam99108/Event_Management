@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="media.css">
+    <title>HOME || DAZZLEAURA </title>
+    <link
+      rel="shortcut icon"
+      href="https://svgsilh.com/svg/1531643.svg"
+      type="image/x-icon"
+    />
+    
+
+</head>
+
+  <body>  
+  
+    <header>
+        <nav>
+          <nav>
+    <h6>DazzleAura</h6>
+    <ul id="menu_bx">
+        <li class="dropdown">
+            <a href="#" id="venue-option">Venue</a>
+            <ul id="state-dropdown" class="dropdown-menu" style="display: none;">
+                <!-- States will be dynamically populated here -->
+            </ul>
+        </li>
+        <li><a href="/community.html">Community</a></li>
+        <li><a href="#offers">Special Deals</a></li>
+        <li><a href="#destination">About Us</a></li>
+        
+    </ul>
+    <i class="bi bi-three-dots"></i>
+</nav>
+
+            
+        </nav>
+        <div class="content">
+            <div class="cont_bx">
+                <h1>The right desitination for event and parties</h1>
+                <p>Creative taglines have the power to captivate potential clients for your event.</p>
+                <div class="search-container">
+                  <input type="text" id="search-box" placeholder="Search..." />
+                  <button type="submit" class="search-btn">Search</button>
+              </div>
+              
+            </div>
+            <div class="trip_bx">
+                <div class="search_bx">
+                    <div class="card">
+                        <h4>Event Type <i class=></i></h4>
+                        <select id="eventType" required>
+                            <option value="">Select Event Type</option>
+                            <option value="Wedding">Wedding Ceremony</option>
+                            <option value="Corporate Meeting">Corporate Meeting</option>
+                            <option value="Festival">Festival & Celebration</option>
+                            <option value="Conference">Business Conference</option>
+                            <option value="Concert">Live Concert</option>
+                            <option value="Birthday">Birthday Party</option>
+                            <option value="Exhibition">Art Exhibition</option>
+                        </select>
+                    </div>
+                    <div class="card">
+                        <h4>Location <i class=></i></h4>
+                        <select id="destination" required>
+                            <option value="">Select Destination</option>
+                            <option value="Banquet Hall A">Banquet Hall A - Capacity 200</option>
+                            <option value="Conference Center">Conference Center - Capacity 500</option>
+                            <option value="Garden Venue">Garden Venue - Capacity 300</option>
+                            <option value="Grand Ballroom">Grand Ballroom - Capacity 1000</option>
+                            <option value="Rooftop Terrace">Rooftop Terrace - Capacity 150</option>
+                            <option value="Exhibition Hall">Exhibition Hall - Capacity 800</option>
+                            <option value="Poolside Venue">Poolside Venue - Capacity 250</option>
+                        </select>
+                    </div>
+                    <div class="card">
+                        <h4>Date <i class=></i></h4>
+                        <input type="date" id="date">
+                    </div>
+                    <div class="card">
+                        <h4>Group Size <i class=></i></h4>
+                        <select id="people" required>
+                            <option value="">Select Group Size</option>
+                            <option value="10-50">10-50 people (Small)</option>
+                            <option value="51-100">51-100 people (Medium)</option>
+                            <option value="101-200">101-200 people (Large)</option>
+                            <option value="201-500">201-500 people (Extra Large)</option>
+                            <option value="500+">500+ people (Custom Size)</option>
+                        </select>
+                    </div>
+                    <input type="button" value="Book Now" onclick="submitBooking()">
+                </div>
+                <div class="travel_bx">
+                    <h4>State of Event</h4>
+                    <div class="cards">
+                        <div class="card">
+                            <h3>DELHI </h3>
+                            <img src="/Assest/banquties1.jpg" alt="">
+                            <div class="btn_city">
+                                <a href="/hotles/delhi.html">Know More</a>
+                                <h5>New Delhi <br> <span>$460</span></h5>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>MUMBAI </h3>
+                            <img src="/Assest/Top-Luxury-Hotels-in-Mumbai.jpg" alt="">
+                            <div class="btn_city">
+                                <a href="/hotles/mumbai.html">Know More</a>
+                                <h5>Mumbai Central <br> <span>$870</span></h5>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>Punjab </h3>
+                            <img src="/Assest/punjab.jpg" alt="">
+                            <div class="btn_city">
+                                <a href="/hotles/punjab.html">Know More</a>
+                                <h5>Chandigarh <br> <span>$660</span></h5>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3>Goa </h3>
+                            <img src="/Assest/goa.jpg" alt="">
+                            <div class="btn_city">
+                                <a href="/hotles/goa.html">Know More</a>
+                                <h5>Panji <br> <span>$730</span></h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="offers" id="offers">
+        <h1>Best Event Package offers for You</h1>
+        <p>choose your next Event</p>
+        <div class="cards">
+            <div class="card">
+                <h3><a href="/bestevent/wedding.html">Wedding Event</a></h3>
+                <div class="img_text">
+                    <img src="/Assest/couple-hindu-marriage-date-2021.jpg" alt="">
+                    <h4>Included: Airfare, hotel accommodation, breakfast, wedding itinerary tours, and airport transfers.</h4>
+                </div>
+                <div class="cont_bx">
+                    <div class="price">
+                        <div class="heart_chat">
+                            <i class="bi bi-heart-fill"><span>86415</span></i>
+                            <i class="bi bi-chat-fill"><span>4586</span></i>
+                        </div>
+                        <div class="info_price">
+                            <a href="">More Info</a>
+                            <h4>$2648</h4>
+                        </div>
+                    </div>
+                    <div class="dayes">5 Days <br> India</div>
+                </div>
+            </div>
+            <div class="card">
+                <h3><a href="/bestevent/corporate.html">Corporate meeting</a></h3>
+                <div class="img_text">
+                    <img src="/Assest/corportate.jpg" alt="">
+                    <h4>Included: Airfare, hotel stay, meals, corporate activities, and airport transfers.</h4>
+                </div>
+                <div class="cont_bx">
+                    <div class="price">
+                        <div class="heart_chat">
+                            <i class="bi bi-heart-fill"><span>86415</span></i>
+                            <i class="bi bi-chat-fill"><span>4586</span></i>
+                        </div>
+                        <div class="info_price">
+                            <a href="">More Info</a>
+                            <h4>$2648</h4>
+                        </div>
+                    </div>
+                    <div class="dayes">5 Days <br> mumbai </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3><a href="/bestevent/festivals.html">FESTIVAL</a></h3>
+                <div class="img_text">
+                    <img src="/Assest/festival.jpg" alt="">
+                    <h4>Included: Airfare, hotel stay, meals, corporate activities, and airport transfers.</h4>
+                </div>
+                <div class="cont_bx">
+                    <div class="price">
+                        <div class="heart_chat">
+                            <i class="bi bi-heart-fill"><span>86415</span></i>
+                            <i class="bi bi-chat-fill"><span>4586</span></i>
+                        </div>
+                        <div class="info_price">
+                            <a href="">More Info</a>
+                            <h4>$2648</h4>
+                        </div>
+                    </div>
+                    <div class="dayes">5 Days <br> mumbai </div>
+                </div>
+            </div>
+            <div class="card">
+                <h3><a href="/bestevent/conference.html">Conference</a></h3>
+                <div class="img_text">
+                    <img src="/Assest/conference-speaker.jpg" alt="">
+                    <h4>Included: Flights, accommodation, meals, conference access, and airport transfers.</h4>
+                </div>
+                <div class="cont_bx">
+                    <div class="price">
+                        <div class="heart_chat">
+                            <i class="bi bi-heart-fill"><span>86415</span></i>
+                            <i class="bi bi-chat-fill"><span>4586</span></i>
+                        </div>
+                        <div class="info_price">
+                            <a href="">More Info</a>
+                            <h4>$2648</h4>
+                        </div>
+                    </div>
+                    <div class="dayes">7 Days <br> Egypt</div>
+                </div>
+            </div>
+            <div class="card">
+                <h3><a href="/bestevent/concert1.html">Concert</a></h3>
+                <div class="img_text">
+                    <img src="/Assest/ccncert.jpeg" alt="">
+                    <h4>Includes: Concert tickets, accommodation, meals, transportation, and exclusive experiences.</h4>
+                </div>
+                <div class="cont_bx">
+                    <div class="price">
+                        <div class="heart_chat">
+                            <i class="bi bi-heart-fill"><span>86415</span></i>
+                            <i class="bi bi-chat-fill"><span>4586</span></i>
+                        </div>
+                        <div class="info_price">
+                            <a href="">More Info</a>
+                            <h4>$2648</h4>
+                        </div>
+                    </div>
+                    <div class="dayes">7 Days <br> Veitna</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <div class="destination" id="destination">
+        <div class="des_bx">
+            <h4>Our Event</h4>
+            <p>choose your next Event</p>
+            <li>Delhi</li>
+            <li>mumbai</li>
+            <li>Goa</li>
+            <li>Rajasthan</li>
+            <li>Punjab</li>
+            <li>haryana</li>
+            <h6>Included: Air ticket, Hotel, Breakfast, Tours, Airport transfer</h6>
+            <button>MORE INFO</button>
+        </div>
+<div class="img_bx">
+            <video autoplay
+            loop
+            muted src="/Assest/background video.mp4"></video>
+            
+            
+        </div>
+    </div>
+    <footer> 
+      <h2>Subscribe & <br> get special discount</h2>
+      <p>"Event Planning, tailored to your needs, expertly executed with precision</p>
+      <div class="input">
+          <input type="text" placeholder="Enter your Email Address">
+          <button>Subscribe</button>
+      </div>
+      <ul>
+          <li>7823 <br> <h6>Years Serving the Event </h6></li>
+          <li>6374 <br><h6>Global <br> Patnership</h6> </li>
+          <li>1496 <br> <h6>Industry Awards since 2022</h6></li>
+          <li>5658 <br> <h6>Subscribe</h6></li>
+      </ul>
+
+      <div>
+          <div id="about">
+              <h3>About Us</h3>
+          </div>
+      </div>
+  </footer>
+    <footer class="footer" style="background-image: url('./assets/images/footer-bg.png')">
+
+        <div class="footer-top section">
+          <div class="container grid-list">
+    
+            <div class="footer-brand">
+    
+              <!-- <a href="#" class="logo">
+                <img src="./assets/images/logo-light.svg" width="162" height="50" alt="EduWeb logo">
+              </a>
+    
+              <p class="footer-brand-text">
+                Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incidid unt labore dolore.
+              </p>
+    
+              <div class="wrapper">
+                <span class="span">Add:</span>
+    
+                <address class="address">70-80 Upper St Norwich NR2</address>
+              </div>
+    
+              <div class="wrapper">
+                <span class="span">Call:</span>
+    
+                <a href="tel:+011234567890" class="footer-link">+01 123 4567 890</a>
+              </div>
+    
+              <div class="wrapper">
+                <span class="span">Email:</span>
+    
+                <a href="mailto:info@eduweb.com" class="footer-link">info@eduweb.com</a>
+              </div>
+    
+            </div>
+    
+            <ul class="footer-list">
+    
+              <li>
+                <p class="footer-list-title">Online Platform</p>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">About</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Courses</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Instructor</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Events</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Instructor Profile</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Purchase Guide</a>
+              </li>
+    
+            </ul>
+    
+            <ul class="footer-list">
+    
+              <li>
+                <p class="footer-list-title">Links</p>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Contact Us</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Gallery</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">News & Articles</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">FAQ's</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Sign In/Registration</a>
+              </li>
+    
+              <li>
+                <a href="#" class="footer-link">Coming Soon</a>
+              </li>
+    
+            </ul>
+    
+            <div class="footer-list">
+    
+              <p class="footer-list-title">Contacts</p>
+    
+              <p class="footer-list-text">
+                Enter your email address to register to our newsletter subscription
+              </p>
+    
+              <form action="" class="newsletter-form">
+                <input type="email" name="email_address" placeholder="Your email" required class="input-field">
+    
+                <button type="submit" class="btn has-before">
+                  <span class="span">Subscribe</span>
+    
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </button>
+              </form>
+    
+              <ul class="social-list">
+    
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li> -->
+    
+                <li>
+                  <a href="#" class="social-link">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                  </a>
+                </li>
+    
+              </ul>
+    
+            </div>
+    
+          </div>
+        </div>
+    
+        <div class="footer-bottom">
+          <div class="container">
+    
+            <p class="copyright">
+              Copyright 2024 All Rights Reserved by <a href="#" class="copyright-link">BYTEME</a>
+            </p>
+    
+          </div>
+        </div>
+    
+    </footer>
+
+    
+
+    <a href="#top" class="back-top-btn" aria-label="back top top" data-back-top-btn>
+        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+      </a>
+    
+    <style>
+        .search_bx {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .search_bx .card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .search_bx .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .search_bx .card h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search_bx .card h4 i {
+            font-size: 20px;
+        }
+
+        .search_bx .card select,
+        .search_bx .card input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 16px;
+            color: #333;
+            background: white;
+            transition: all 0.3s ease;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%231a73e8' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: calc(100% - 15px) center;
+            padding-right: 40px;
+        }
+
+        .search_bx .card select:focus,
+        .search_bx .card input:focus {
+            border-color: #333;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+        }
+
+        .search_bx .card select option {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .search_bx input[type="button"] {
+            background: linear-gradient(45deg, #333, #34a853);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            margin: 30px auto 0;
+            width: auto;
+            min-width: 200px;
+        }
+
+        .search_bx input[type="button"]:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(26, 115, 232, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .search_bx {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .search_bx .card {
+                padding: 15px;
+            }
+
+            .search_bx input[type="button"] {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
+    <script>
+        // Set minimum date to today
+        const dateInput = document.getElementById('date');
+        const today = new Date().toISOString().split('T')[0];
+        dateInput.min = today;
+
+        function submitBooking() {
+            const eventType = document.getElementById('eventType').value;
+            const destination = document.getElementById('destination').value;
+            const date = document.getElementById('date').value;
+            const people = document.getElementById('people').value;
+
+            if (!eventType || !destination || !date || !people) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            // Store current page state
+            sessionStorage.setItem('needsRefresh', 'true');
+
+            // Redirect to booking details page
+            window.location.href = `booking-details.html?eventType=${encodeURIComponent(eventType)}&destination=${encodeURIComponent(destination)}&date=${encodeURIComponent(date)}&people=${encodeURIComponent(people)}`;
+        }
+
+        // Check if page needs refresh
+        window.onload = function() {
+            if (sessionStorage.getItem('needsRefresh') === 'true') {
+                sessionStorage.removeItem('needsRefresh');
+                location.reload();
+            }
+        }
+    </script>
+    <script src="app.js"></script>
+    
+</body>
+
+</html>
