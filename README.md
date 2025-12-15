@@ -1,4 +1,6 @@
 # Event_Management
+<img width="1855" height="897" alt="Screenshot 2025-12-15 171340" src="https://github.com/user-attachments/assets/ee35bbf0-f86c-49a8-ac16-c96949c646ae" />
+
 
 # 🎉 DazelAura – Event & Booking Management System  
 
